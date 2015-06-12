@@ -13,6 +13,8 @@
 		A41F0DAE1B2A5BA7008403E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41F0DAD1B2A5BA7008403E6 /* Images.xcassets */; };
 		A41F0DB11B2A5BA7008403E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41F0DAF1B2A5BA7008403E6 /* LaunchScreen.xib */; };
 		A41F0DBD1B2A5BA7008403E6 /* cannes_photoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41F0DBC1B2A5BA7008403E6 /* cannes_photoTests.swift */; };
+		A41F0DC91B2A82B6008403E6 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41F0DC81B2A82B6008403E6 /* SelectViewController.swift */; };
+		A41F0DCB1B2AAB11008403E6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41F0DCA1B2AAB11008403E6 /* PreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		A41F0DB61B2A5BA7008403E6 /* cannes-photoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cannes-photoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41F0DBB1B2A5BA7008403E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A41F0DBC1B2A5BA7008403E6 /* cannes_photoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cannes_photoTests.swift; sourceTree = "<group>"; };
+		A41F0DC81B2A82B6008403E6 /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		A41F0DCA1B2AAB11008403E6 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				A41F0DAD1B2A5BA7008403E6 /* Images.xcassets */,
 				A41F0DAF1B2A5BA7008403E6 /* LaunchScreen.xib */,
 				A41F0DA41B2A5BA7008403E6 /* Supporting Files */,
+				A41F0DC81B2A82B6008403E6 /* SelectViewController.swift */,
+				A41F0DCA1B2AAB11008403E6 /* PreviewViewController.swift */,
 			);
 			path = "cannes-photo";
 			sourceTree = "<group>";
@@ -213,7 +219,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A41F0DA91B2A5BA7008403E6 /* ViewController.swift in Sources */,
+				A41F0DC91B2A82B6008403E6 /* SelectViewController.swift in Sources */,
 				A41F0DA71B2A5BA7008403E6 /* AppDelegate.swift in Sources */,
+				A41F0DCB1B2AAB11008403E6 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +351,7 @@
 				INFOPLIST_FILE = "cannes-photo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -353,6 +362,7 @@
 				INFOPLIST_FILE = "cannes-photo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -409,6 +419,7 @@
 				A41F0DC21B2A5BA7008403E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A41F0DC31B2A5BA7008403E6 /* Build configuration list for PBXNativeTarget "cannes-photoTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +428,7 @@
 				A41F0DC51B2A5BA7008403E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
