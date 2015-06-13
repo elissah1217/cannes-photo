@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="YxB-U8-5S6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -33,17 +33,6 @@
                                     <action selector="onSelect:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ECY-dy-5Ua"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iIL-8Z-ITe">
-                                <rect key="frame" x="390" y="695" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Retake">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onRetake:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p0U-PS-xgf"/>
-                                </connections>
-                            </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="arrow_left" id="Efg-z2-vPI">
                                 <rect key="frame" x="30" y="370" width="16" height="33"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -70,6 +59,18 @@
                                 </state>
                                 <connections>
                                     <action selector="onRightArrow:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="E0H-Vt-c3T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iIL-8Z-ITe">
+                                <rect key="frame" x="390" y="695" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Retake">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRetake:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p0U-PS-xgf"/>
+                                    <segue destination="YxB-U8-5S6" kind="modal" identifier="homeSegue" modalTransitionStyle="crossDissolve" id="ymd-7K-dyV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -162,14 +163,6 @@
                                             </label>
                                         </subviews>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IIy-0G-dIc">
-                                        <rect key="frame" x="50" y="587" width="110" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wvG-JF-sur">
                                         <rect key="frame" x="177" y="587" width="157" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -183,6 +176,17 @@
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IIy-0G-dIc">
+                                        <rect key="frame" x="50" y="587" width="110" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="YxB-U8-5S6" kind="modal" modalTransitionStyle="crossDissolve" id="HEb-WE-VIa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.0" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -220,15 +224,130 @@
             </objects>
             <point key="canvasLocation" x="1610" y="732"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="HeM-Pq-gEJ">
+            <objects>
+                <viewController id="YxB-U8-5S6" customClass="ViewController" customModule="cannes_photo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0eE-kb-Uuv">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="cPN-DC-sPy">
+                                <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="QxX-Ma-Kyq">
+                                <rect key="frame" x="252" y="204" width="550" height="295"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cKH-7Y-t6u">
+                                        <rect key="frame" x="181" y="195" width="189" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.043137254899999998" green="0.3803921569" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Tap to Take Photos">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressTakePhoto:" destination="YxB-U8-5S6" eventType="touchUpInside" id="4Lj-HG-Sf2"/>
+                                        </connections>
+                                    </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="logo" id="BtG-qn-oO8">
+                                        <rect key="frame" x="69" y="60" width="425" height="93"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.56000000000000005" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tSa-VD-8l8" appends="YES" id="bT8-mV-tuj"/>
+                                </connections>
+                            </view>
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="M6k-Gn-GKs">
+                                <rect key="frame" x="0.0" y="577" width="1024" height="328"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0nl-s1-C70">
+                                        <rect key="frame" x="42" y="33" width="169" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="X66-aB-sbP">
+                                        <rect key="frame" x="236" y="33" width="169" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="JFY-cx-c7i">
+                                        <rect key="frame" x="429" y="33" width="169" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Wr8-0L-RYg">
+                                        <rect key="frame" x="623" y="33" width="169" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VT9-yP-luH">
+                                        <rect key="frame" x="824" y="30" width="169" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.47000000000000003" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R2H-aw-bWM">
+                                <rect key="frame" x="232" y="100" width="559" height="479"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="300"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="cameraView" destination="cPN-DC-sPy" id="H1h-BL-XCG"/>
+                        <outlet property="capturedImage1" destination="0nl-s1-C70" id="pqP-8u-mhP"/>
+                        <outlet property="capturedImage2" destination="X66-aB-sbP" id="Acw-n6-4Ey"/>
+                        <outlet property="capturedImage3" destination="JFY-cx-c7i" id="770-R8-itd"/>
+                        <outlet property="capturedImage4" destination="Wr8-0L-RYg" id="7bP-pK-Wq8"/>
+                        <outlet property="capturedImage5" destination="VT9-yP-luH" id="PXz-0B-o1g"/>
+                        <outlet property="countdownLabel" destination="R2H-aw-bWM" id="Jjc-eQ-KiY"/>
+                        <outlet property="imagesBackground" destination="M6k-Gn-GKs" id="3gD-Um-EPG"/>
+                        <outlet property="startView" destination="QxX-Ma-Kyq" id="jWd-cF-R38"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="reviewSegue" modalTransitionStyle="crossDissolve" id="ltU-To-tSd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWJ-9o-ECS" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tSa-VD-8l8">
+                    <connections>
+                        <action selector="didPressTakePhoto:" destination="YxB-U8-5S6" id="fdp-3Y-inP"/>
+                        <outlet property="delegate" destination="QxX-Ma-Kyq" id="MpW-Sd-1rM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-829" y="740"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow_left" width="34" height="69"/>
         <image name="arrow_right" width="34" height="69"/>
         <image name="image2" width="275" height="183"/>
+        <image name="logo" width="549" height="120"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ymd-7K-dyV"/>
+    </inferredMetricsTieBreakers>
 </document>

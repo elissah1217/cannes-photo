@@ -23,17 +23,23 @@ class SelectViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageViewArray = []
+        //imageViewArray = []
         deviceSize = self.view.frame.size
         leftButton.enabled = false
         currentImageIndex = 0
         
+//        
+//        for var i = 0; i < 5; i++ {
+//            var photoView = UIImageView()
+//            photoView.image = UIImage(named: "image\(i+1)")
+//            imageViewArray.append(photoView)
+//            
+//        }
+        println("count \(imageViewArray.count)")
         
         for var i = 0; i < 5; i++ {
-            var photoView = UIImageView()
-            photoView.image = UIImage(named: "image\(i+1)")
-            imageViewArray.append(photoView)
-            
+            println(imageViewArray[i].frame.size)
+                        
         }
         
       
@@ -123,8 +129,16 @@ class SelectViewController: UIViewController, UIScrollViewDelegate {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var destinationViewController = segue.destinationViewController as! PreviewViewController
-        destinationViewController.selectedImage = imageViewArray[currentImageIndex].image
+        
+        if segue.identifier == "previewSegue"{
+            var destinationViewController = segue.destinationViewController as! PreviewViewController
+            destinationViewController.selectedImage = imageViewArray[currentImageIndex].image
+        }
+        else{
+            var destinationViewController = segue.destinationViewController as! ViewController
+           // destinationViewController.takeNextPhoto()
+        }
+        
     }
 
 
