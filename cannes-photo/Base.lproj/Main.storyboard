@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390" y="732"/>
+            <point key="canvasLocation" x="360" y="740"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="XeK-Kk-jJx">
@@ -227,15 +227,18 @@
         <!--View Controller-->
         <scene sceneID="HeM-Pq-gEJ">
             <objects>
-                <viewController id="YxB-U8-5S6" customClass="ViewController" customModule="cannes_photo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0eE-kb-Uuv">
+                <viewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="YxB-U8-5S6" customClass="ViewController" customModule="cannes_photo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="center" id="0eE-kb-Uuv">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="cPN-DC-sPy">
-                                <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
+                            <view autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="cPN-DC-sPy">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
                             </view>
                             <view contentMode="scaleToFill" id="QxX-Ma-Kyq">
                                 <rect key="frame" x="252" y="204" width="550" height="295"/>
@@ -310,6 +313,9 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                        </accessibility>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>

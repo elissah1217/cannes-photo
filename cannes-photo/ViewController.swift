@@ -38,24 +38,29 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         for image in [capturedImage1,capturedImage2,capturedImage3,capturedImage4,capturedImage5] {
-            image.layer.borderColor = IMAGE_BORDER_COLOR;
-            image.layer.borderWidth = IMAGE_BORDER_WIDTH;
+            image.layer.borderColor = IMAGE_BORDER_COLOR
+            image.layer.borderWidth = IMAGE_BORDER_WIDTH
         }
         
-        selectedDevice = findCameraWithPosition(.Front);
-        captureSession.sessionPreset = AVCaptureSessionPresetMedium;
+        selectedDevice = findCameraWithPosition(.Front)
+        captureSession.sessionPreset = AVCaptureSessionPresetMedium
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer?.frame = cameraView.layer.frame;
+        previewLayer?.frame = cameraView.layer.frame
         cameraView.layer.addSublayer(previewLayer)
         captureSession.addInput(AVCaptureDeviceInput(device: selectedDevice, error: &err));
-        stillImageOutput = AVCaptureStillImageOutput();
-        captureSession.addOutput(stillImageOutput);
-        captureSession.startRunning();
-        videoConnection = stillImageOutput?.connectionWithMediaType(AVMediaTypeVideo);
-        
-        processOrientationNotifications();
+        stillImageOutput = AVCaptureStillImageOutput()
+        captureSession.addOutput(stillImageOutput)
+        captureSession.startRunning()
+        videoConnection = stillImageOutput?.connectionWithMediaType(AVMediaTypeVideo)
+
+        self.updateOrientation()
+        processOrientationNotifications()
+    }
+    
+    override func shouldAutorotate() -> Bool {
+        return true
     }
     
     @IBAction func didPressTakePhoto(sender: AnyObject) {
@@ -127,6 +132,10 @@ class ViewController: UIViewController {
         if observer != nil {
             NSNotificationCenter.defaultCenter().removeObserver(observer!);
         }
+
+        if captureSession.running {
+            captureSession.stopRunning()
+        }
         
         UIDevice.currentDevice().endGeneratingDeviceOrientationNotifications();
     }
@@ -148,8 +157,6 @@ class ViewController: UIViewController {
         return nil;
     }
     
-    
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         println("prepare")
         var destinationViewController = segue.destinationViewController as! SelectViewController
@@ -159,37 +166,25 @@ class ViewController: UIViewController {
         println("image array count \(destinationViewController.imageViewArray.count)")
     }
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator);
-        if let layer = previewLayer {
-            layer.frame = CGRectMake(0,0,size.width, size.height);
-        }
-    }
-    
     func processOrientationNotifications() {
         UIDevice.currentDevice().beginGeneratingDeviceOrientationNotifications();
         observer = NSNotificationCenter.defaultCenter().addObserverForName(UIDeviceOrientationDidChangeNotification, object: nil, queue: NSOperationQueue.mainQueue()) { [unowned self](notification: NSNotification!) -> Void in
-            if let layer = self.previewLayer {
-                switch UIDevice.currentDevice().orientation {
-                case .LandscapeLeft:
-                    layer.connection.videoOrientation = .LandscapeRight;
-                case .LandscapeRight:
-                    layer.connection.videoOrientation = .LandscapeLeft;
-                default:
-                    layer.connection.videoOrientation = layer.connection.videoOrientation;
-                    
-                }
-            }
+                self.updateOrientation()
         }
     }
     
-    
-    
-    @IBAction func didPressTakeAnother(sender: AnyObject) {
-        captureSession.startRunning()
+    func updateOrientation()
+    {
+        if let layer = self.previewLayer {
+            switch UIDevice.currentDevice().orientation {
+            case .LandscapeLeft:
+                layer.connection.videoOrientation = .LandscapeRight;
+            case .LandscapeRight:
+                layer.connection.videoOrientation = .LandscapeLeft;
+            default:
+                layer.connection.videoOrientation = layer.connection.videoOrientation;
+                
+            }
+        }
     }
-    
-    
-    
-    
 }
