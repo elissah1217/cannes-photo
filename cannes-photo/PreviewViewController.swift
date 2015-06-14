@@ -7,17 +7,15 @@
 //
 
 import UIKit
+import SwiftHTTP
 
 class PreviewViewController: UIViewController, UITextViewDelegate {
-
-    
 
     @IBOutlet weak var overlayTextInput: UITextField!
     @IBOutlet weak var overlayLabel: UILabel!
     
-    @IBOutlet weak var photoView: UIImageView!
-    @IBOutlet weak var composeView: UIView!
     @IBOutlet weak var selectedImageView: UIImageView!
+    @IBOutlet weak var selectedImageContainer: UIView!
 
     @IBOutlet weak var flickrInput: UITextField!
     @IBOutlet weak var flickrHandles: UILabel!
@@ -39,6 +37,7 @@ class PreviewViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var twitterHandles: UILabel!
     @IBOutlet weak var twitterButton: UIButton!
     
+    @IBOutlet weak var printImage: UIImageView!
     @IBOutlet weak var printButton: UIButton!
     @IBOutlet weak var printOnly: UISwitch!
     
@@ -73,10 +72,52 @@ class PreviewViewController: UIViewController, UITextViewDelegate {
  
     @IBAction func didEndOnExit(sender: UITextField) {
         sender.resignFirstResponder()
+        updateHandles(sender)
     }
     
     @IBAction func touchUpInsidePrint(sender: AnyObject) {
         println("Print!")
+        
+        UIGraphicsBeginImageContext(selectedImageContainer.frame.size)
+        selectedImageContainer.drawViewHierarchyInRect(selectedImageContainer.bounds, afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.printImage.image = image;
+        
+        let fileManager = NSFileManager.defaultManager()
+        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+        var filePathToWrite = "\(paths)/SaveFile.png"
+        var imageData: NSData = UIImagePNGRepresentation(selectedImage)
+        fileManager.createFileAtPath(filePathToWrite, contents: imageData, attributes: nil)
+        var getImagePath = paths.stringByAppendingPathComponent("SaveFile.png")
+        
+//        if fileManager.fileExistsAtPath(getImagePath) {
+//            println("FILE AVAILABLE");
+//            var imageis: UIImage = UIImage(contentsOfFile: getImagePath)!
+//            let data: NSData = UIImagePNGRepresentation(imageis)
+//        } else {
+//            println("FILE NOT AVAILABLE")
+//        }
+        
+//        let task = HTTPTask()
+//        var fileUrl = NSURL(fileURLWithPath: getImagePath)!
+//        task.upload("http://192.168.1.120:1337/cannes/photobooth",
+//            method: .POST,
+//            parameters: ["aParam": "aValue", "file": HTTPUpload(fileUrl: fileUrl)],
+//            progress: { (value: Double) in
+//                println("progress: \(value)")
+//            },
+//            completionHandler: { (response: HTTPResponse) in
+//                if let err = response.error {
+//                    println("error: \(err.localizedDescription)")
+//                    return //also notify app of failure as needed
+//                }
+//                if let data = response.responseObject as? NSData {
+//                    let str = NSString(data: data, encoding: NSUTF8StringEncoding)
+//                    println("response: \(str!)") //prints the response
+//                }
+//            }
+//        )
     }
 
     func updateHandles(textField:UITextField) {

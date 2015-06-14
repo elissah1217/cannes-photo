@@ -10,6 +10,8 @@
 	<string>cannes-photo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>38D9009B322140394B9DA7467F68950B56B35FF5</key>
+		<string>https://github.com/daltoniam/SwiftHTTP.git</string>
 		<key>3FF863EDB92142957FF6A6F4CB51B49BDB714E83</key>
 		<string>https://github.com/elissah1217/cannes-photo.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>cannes-photo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>38D9009B322140394B9DA7467F68950B56B35FF5</key>
+		<string>../../SwiftHTTP/</string>
 		<key>3FF863EDB92142957FF6A6F4CB51B49BDB714E83</key>
 		<string>../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>3FF863EDB92142957FF6A6F4CB51B49BDB714E83</string>
 			<key>IDESourceControlWCCName</key>
 			<string>cannes-photo</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>38D9009B322140394B9DA7467F68950B56B35FF5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftHTTP</string>
 		</dict>
 	</array>
 </dict>
