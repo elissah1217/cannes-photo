@@ -15,6 +15,19 @@
 		A41F0DBD1B2A5BA7008403E6 /* cannes_photoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41F0DBC1B2A5BA7008403E6 /* cannes_photoTests.swift */; };
 		A41F0DC91B2A82B6008403E6 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41F0DC81B2A82B6008403E6 /* SelectViewController.swift */; };
 		A41F0DCB1B2AAB11008403E6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41F0DCA1B2AAB11008403E6 /* PreviewViewController.swift */; };
+		E9A774081B2BFC5D009B5248 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A774041B2BFC5D009B5248 /* AudioToolbox.framework */; };
+		E9A7740A1B2BFC5D009B5248 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A774061B2BFC5D009B5248 /* CoreAudio.framework */; };
+		E9A7740B1B2BFC5D009B5248 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A774071B2BFC5D009B5248 /* CoreAudioKit.framework */; };
+		E9A774121B2BFDC8009B5248 /* countdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9A774111B2BFDC8009B5248 /* countdown.wav */; };
+		E9A774171B2C0216009B5248 /* appicon-photobooth-76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A774141B2C0216009B5248 /* appicon-photobooth-76x76.png */; };
+		E9A774181B2C0216009B5248 /* appicon-photobooth-120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A774151B2C0216009B5248 /* appicon-photobooth-120x120.png */; };
+		E9A774191B2C0216009B5248 /* appicon-photobooth-180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A774161B2C0216009B5248 /* appicon-photobooth-180x180.png */; };
+		E9A7741C1B2C0660009B5248 /* yahoo-cannes-logo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7741B1B2C0660009B5248 /* yahoo-cannes-logo-2.png */; };
+		E9A774241B2C08FB009B5248 /* linkedin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9A7741F1B2C08FB009B5248 /* linkedin.jpg */; };
+		E9A774291B2C0B6A009B5248 /* tumblr.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A774281B2C0B6A009B5248 /* tumblr.png */; };
+		E9A7742B1B2C0B70009B5248 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7742A1B2C0B70009B5248 /* facebook.png */; };
+		E9A7742E1B2C0C4E009B5248 /* flickr.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7742C1B2C0C4E009B5248 /* flickr.png */; };
+		E9A774311B2C0CCB009B5248 /* twitter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9A774301B2C0CCB009B5248 /* twitter.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +53,20 @@
 		A41F0DBC1B2A5BA7008403E6 /* cannes_photoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cannes_photoTests.swift; sourceTree = "<group>"; };
 		A41F0DC81B2A82B6008403E6 /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		A41F0DCA1B2AAB11008403E6 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		E9A774041B2BFC5D009B5248 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E9A774051B2BFC5D009B5248 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		E9A774061B2BFC5D009B5248 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		E9A774071B2BFC5D009B5248 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		E9A774111B2BFDC8009B5248 /* countdown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = countdown.wav; sourceTree = "<group>"; };
+		E9A774141B2C0216009B5248 /* appicon-photobooth-76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-photobooth-76x76.png"; sourceTree = "<group>"; };
+		E9A774151B2C0216009B5248 /* appicon-photobooth-120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-photobooth-120x120.png"; sourceTree = "<group>"; };
+		E9A774161B2C0216009B5248 /* appicon-photobooth-180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-photobooth-180x180.png"; sourceTree = "<group>"; };
+		E9A7741B1B2C0660009B5248 /* yahoo-cannes-logo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yahoo-cannes-logo-2.png"; sourceTree = "<group>"; };
+		E9A7741F1B2C08FB009B5248 /* linkedin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = linkedin.jpg; sourceTree = "<group>"; };
+		E9A774281B2C0B6A009B5248 /* tumblr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tumblr.png; sourceTree = "<group>"; };
+		E9A7742A1B2C0B70009B5248 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		E9A7742C1B2C0C4E009B5248 /* flickr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flickr.png; sourceTree = "<group>"; };
+		E9A774301B2C0CCB009B5248 /* twitter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twitter.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A774081B2BFC5D009B5248 /* AudioToolbox.framework in Frameworks */,
+				E9A7740A1B2BFC5D009B5248 /* CoreAudio.framework in Frameworks */,
+				E9A7740B1B2BFC5D009B5248 /* CoreAudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,14 +111,13 @@
 		A41F0DA31B2A5BA7008403E6 /* cannes-photo */ = {
 			isa = PBXGroup;
 			children = (
-				A41F0DA61B2A5BA7008403E6 /* AppDelegate.swift */,
 				A41F0DA81B2A5BA7008403E6 /* ViewController.swift */,
-				A41F0DAA1B2A5BA7008403E6 /* Main.storyboard */,
-				A41F0DAD1B2A5BA7008403E6 /* Images.xcassets */,
-				A41F0DAF1B2A5BA7008403E6 /* LaunchScreen.xib */,
-				A41F0DA41B2A5BA7008403E6 /* Supporting Files */,
-				A41F0DC81B2A82B6008403E6 /* SelectViewController.swift */,
 				A41F0DCA1B2AAB11008403E6 /* PreviewViewController.swift */,
+				A41F0DC81B2A82B6008403E6 /* SelectViewController.swift */,
+				A41F0DAA1B2A5BA7008403E6 /* Main.storyboard */,
+				A41F0DAF1B2A5BA7008403E6 /* LaunchScreen.xib */,
+				A41F0DA61B2A5BA7008403E6 /* AppDelegate.swift */,
+				A41F0DA41B2A5BA7008403E6 /* Supporting Files */,
 			);
 			path = "cannes-photo";
 			sourceTree = "<group>";
@@ -96,6 +125,11 @@
 		A41F0DA41B2A5BA7008403E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9A774271B2C0902009B5248 /* images */,
+				E9A774131B2C00CC009B5248 /* Frameworks */,
+				E9A7741A1B2C0242009B5248 /* icons */,
+				A41F0DAD1B2A5BA7008403E6 /* Images.xcassets */,
+				E9A774111B2BFDC8009B5248 /* countdown.wav */,
 				A41F0DA51B2A5BA7008403E6 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -116,6 +150,40 @@
 				A41F0DBB1B2A5BA7008403E6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9A774131B2C00CC009B5248 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9A774041B2BFC5D009B5248 /* AudioToolbox.framework */,
+				E9A774051B2BFC5D009B5248 /* AudioUnit.framework */,
+				E9A774061B2BFC5D009B5248 /* CoreAudio.framework */,
+				E9A774071B2BFC5D009B5248 /* CoreAudioKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9A7741A1B2C0242009B5248 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				E9A774141B2C0216009B5248 /* appicon-photobooth-76x76.png */,
+				E9A774151B2C0216009B5248 /* appicon-photobooth-120x120.png */,
+				E9A774161B2C0216009B5248 /* appicon-photobooth-180x180.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		E9A774271B2C0902009B5248 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E9A774301B2C0CCB009B5248 /* twitter.jpg */,
+				E9A7742C1B2C0C4E009B5248 /* flickr.png */,
+				E9A7742A1B2C0B70009B5248 /* facebook.png */,
+				E9A774281B2C0B6A009B5248 /* tumblr.png */,
+				E9A7741F1B2C08FB009B5248 /* linkedin.jpg */,
+				E9A7741B1B2C0660009B5248 /* yahoo-cannes-logo-2.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +266,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A7742E1B2C0C4E009B5248 /* flickr.png in Resources */,
+				E9A774241B2C08FB009B5248 /* linkedin.jpg in Resources */,
 				A41F0DAC1B2A5BA7008403E6 /* Main.storyboard in Resources */,
 				A41F0DB11B2A5BA7008403E6 /* LaunchScreen.xib in Resources */,
+				E9A774171B2C0216009B5248 /* appicon-photobooth-76x76.png in Resources */,
+				E9A774311B2C0CCB009B5248 /* twitter.jpg in Resources */,
+				E9A774181B2C0216009B5248 /* appicon-photobooth-120x120.png in Resources */,
+				E9A7741C1B2C0660009B5248 /* yahoo-cannes-logo-2.png in Resources */,
+				E9A774191B2C0216009B5248 /* appicon-photobooth-180x180.png in Resources */,
+				E9A774121B2BFDC8009B5248 /* countdown.wav in Resources */,
+				E9A7742B1B2C0B70009B5248 /* facebook.png in Resources */,
 				A41F0DAE1B2A5BA7008403E6 /* Images.xcassets in Resources */,
+				E9A774291B2C0B6A009B5248 /* tumblr.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "cannes-photo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "cannes-photo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

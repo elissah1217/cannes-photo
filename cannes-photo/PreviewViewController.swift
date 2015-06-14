@@ -11,106 +11,88 @@ import UIKit
 class PreviewViewController: UIViewController, UITextViewDelegate {
 
     
-    @IBOutlet weak var profileView: UIView!
-    @IBOutlet weak var statusView: UIView!
-    
-    @IBOutlet weak var statusTextView: UITextView!
-    @IBOutlet weak var handleTextField: UITextField!
-    @IBOutlet weak var tagTextField: UITextField!
-    
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var photoView: UIImageView!
-    
-    
-    @IBOutlet weak var composeView: UIView!
 
+    @IBOutlet weak var overlayTextInput: UITextField!
+    @IBOutlet weak var overlayLabel: UILabel!
     
+    @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var composeView: UIView!
     @IBOutlet weak var selectedImageView: UIImageView!
+
+    @IBOutlet weak var flickrInput: UITextField!
+    @IBOutlet weak var flickrHandles: UILabel!
+    @IBOutlet weak var flickrButton: UIButton!
+    
+    @IBOutlet weak var tumblrInput: UITextField!
+    @IBOutlet weak var tumblrHandles: UILabel!
+    @IBOutlet weak var tumblrButton: UIButton!
+    
+    @IBOutlet weak var linkedinInput: UITextField!
+    @IBOutlet weak var linkedinHandles: UILabel!
+    @IBOutlet weak var linkedinButton: UIButton!
+    
+    @IBOutlet weak var facebookInput: UITextField!
+    @IBOutlet weak var facebookHandles: UILabel!
+    @IBOutlet weak var facebookButton: UIButton!
+    
+    @IBOutlet weak var twitterInput: UITextField!
+    @IBOutlet weak var twitterHandles: UILabel!
+    @IBOutlet weak var twitterButton: UIButton!
+    
+    @IBOutlet weak var printButton: UIButton!
+    @IBOutlet weak var printOnly: UISwitch!
     
     var selectedImage: UIImage!
     
-    
-    var profileViewOrigin: CGPoint!
-    var statusViewOrigin: CGPoint!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImageView.clipsToBounds = true
-        statusTextView.delegate = self
-        profileViewOrigin = profileView.frame.origin
-        statusViewOrigin = statusView.frame.origin
-        selectedImageView.image = selectedImage
         selectedImageView.contentMode = UIViewContentMode.ScaleAspectFill
         selectedImageView.clipsToBounds =  true
+        selectedImageView.image = selectedImage
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    func textViewDidBeginEditing(textView: UITextView) {
-        moveUpField()
-        
-    }
-    
-    func textViewDidEndEditing(textView: UITextView) {
-        moveDownField()
-    }
-    
-    @IBAction func onTap(sender: AnyObject) {
-        self.view.endEditing(true)
-        moveDownField()
+    @IBAction func onClickCheckButton(sender: UIButton) {
+        switch sender {
+        case flickrButton:
+            updateHandles(flickrInput)
+        case tumblrButton:
+            updateHandles(tumblrInput)
+        case linkedinButton:
+            updateHandles(linkedinInput)
+        case facebookButton:
+            updateHandles(facebookInput)
+        case twitterButton:
+            updateHandles(twitterInput)
+        default:break;
+        }
     }
 
-    
-    
-    @IBAction func onEditingBegin(sender: AnyObject) {
-        moveUpField()
+    @IBAction func editOverlayText(sender: AnyObject) {
+        overlayLabel.text = overlayTextInput.text
+    }
+ 
+    @IBAction func didEndOnExit(sender: UITextField) {
+        sender.resignFirstResponder()
     }
     
-    
+    @IBAction func touchUpInsidePrint(sender: AnyObject) {
+        println("Print!")
+    }
 
-    
-    @IBAction func onEditingEnd(sender: AnyObject) {
-        moveDownField()
+    func updateHandles(textField:UITextField) {
+        switch textField {
+        case flickrInput:
+            flickrHandles.text = flickrHandles.text?.stringByAppendingString("\(flickrInput.text),")
+        case tumblrInput:
+            tumblrHandles.text = tumblrHandles.text?.stringByAppendingString("\(tumblrInput.text),")
+        case linkedinInput:
+            linkedinHandles.text = linkedinHandles.text?.stringByAppendingString("\(linkedinInput.text),")
+        case facebookInput:
+            facebookHandles.text = facebookHandles.text?.stringByAppendingString("\(facebookInput.text),")
+        case twitterInput:
+            twitterHandles.text = twitterHandles.text?.stringByAppendingString("\(twitterInput.text),")
+        default:break;
+        }
+        textField.text = ""
     }
-    
-    
-    
-    
-    
-    func moveUpField(){
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
-            self.composeView.frame.origin.y = -210
-            
-        })
-    }
-    
-    func moveDownField(){
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
-            self.composeView.frame.origin.y = 0
-          
-        })
-    }
-    
-    
-    
-    
-    @IBAction func onPost(sender: AnyObject) {
-    }
-    
-    
-    @IBAction func onCancel(sender: AnyObject) {
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

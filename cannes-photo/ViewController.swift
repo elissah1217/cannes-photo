@@ -36,9 +36,15 @@ class ViewController: UIViewController {
     var photos = [UIImageView]();
     var countdown = 5;
     
+    let countdownSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("countdown", ofType: "wav")!)!
+    var audioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        audioPlayer = AVAudioPlayer(contentsOfURL: self.countdownSound, error: nil)
+        audioPlayer.prepareToPlay()
+        
         for image in [capturedImage1,capturedImage2,capturedImage3,capturedImage4,capturedImage5] {
             image.layer.borderColor = IMAGE_BORDER_COLOR
             image.layer.borderWidth = IMAGE_BORDER_WIDTH
@@ -65,12 +71,15 @@ class ViewController: UIViewController {
     
     @IBAction func didPressTakePhoto(sender: AnyObject) {
         
+        // fade out
         startView.hidden = true;
         
+        // fade in
         imagesBackground.hidden = false;
         countdownLabel.hidden = false;
         countdownLabel.text = "\(countdown)";
         
+        audioPlayer.play()
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countdown:"), userInfo: nil, repeats: true);
     }
     
@@ -78,11 +87,24 @@ class ViewController: UIViewController {
         countdown--;
         countdownLabel.text = "\(countdown)";
         
-        if(countdown == 1){
+        // animate label
+//        UIView.animateKeyframesWithDuration(0.5, delay: 0, options: UIViewKeyframeAnimationOptions, animations: { () -> Void in
+//            <#code for defining the end value#>
+//            }) { (<#Bool#>) -> Void in
+//                <#code for completion#>
+//        }
+        
+        switch countdown {
+        case 1:
             NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("takeNextPhoto:"), userInfo: nil, repeats: true);
-        } else if (countdown == 0) {
+            audioPlayer.play()
+            break;
+        case 0:
             timer.invalidate();
             countdownLabel.hidden = true;
+            break;
+        default:
+            audioPlayer.play()
         }
     }
     
