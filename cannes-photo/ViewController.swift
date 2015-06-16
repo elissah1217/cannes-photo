@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         audioPlayer = AVAudioPlayer(contentsOfURL: self.countdownSound, error: nil)
         audioPlayer.prepareToPlay()
         
@@ -121,11 +121,11 @@ class ViewController: UIViewController {
                 
                 switch UIDevice.currentDevice().orientation {
                 case .LandscapeLeft:
-                    imageOrientation = UIImageOrientation.Down;
+                    imageOrientation = UIImageOrientation.DownMirrored;
                 case .LandscapeRight:
-                    imageOrientation = UIImageOrientation.Up;
+                    imageOrientation = UIImageOrientation.UpMirrored;
                 default:
-                    imageOrientation = UIImageOrientation.Up;
+                    imageOrientation = UIImageOrientation.UpMirrored;
                     
                 }
                 
