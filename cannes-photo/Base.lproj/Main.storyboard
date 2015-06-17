@@ -27,14 +27,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo_RightBG.png" id="fq6-ED-2kD">
+                                <rect key="frame" x="-5" y="-8" width="1045" height="784"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="SuH-g1-LXG">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="705"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yahoo-cannes-logo-2.png" id="oiz-c2-Xcl">
-                                <rect key="frame" x="10" y="10" width="251" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="arrow_left" id="Efg-z2-vPI">
                                 <rect key="frame" x="30" y="370" width="16" height="33"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -95,6 +95,10 @@
                                     <segue destination="YxB-U8-5S6" kind="modal" identifier="homeSegue" modalTransitionStyle="crossDissolve" id="ymd-7K-dyV"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yahoo-cannes-logo.png" id="aDd-CG-rwN">
+                                <rect key="frame" x="764" y="703" width="255" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.0" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -102,6 +106,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="leftButton" destination="ZBQ-4v-6Nd" id="XcI-4m-26s"/>
                         <outlet property="rightButton" destination="Viu-IP-je4" id="ys3-6H-hUf"/>
@@ -121,42 +126,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6Yb-H0-Wap">
-                                <rect key="frame" x="193" y="11" width="252" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" id="xbY-l8-Hjw">
-                                <rect key="frame" x="26" y="188" width="587" height="445"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="zo0-Cg-NRx">
-                                        <rect key="frame" x="-7" y="-3" width="601" height="451"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" id="On9-3l-kES">
-                                        <rect key="frame" x="0.0" y="363" width="587" height="82"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yahoo-cannes-logo-2.png" id="l5H-FL-hoj">
-                                                <rect key="frame" x="302" y="11" width="285" height="60"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" id="eSo-5W-OhN">
-                                <rect key="frame" x="640" y="20" width="384" height="1212"/>
+                                <rect key="frame" x="640" y="-1" width="384" height="1233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wvG-JF-sur">
-                                        <rect key="frame" x="27" y="258" width="330" height="90"/>
+                                        <rect key="frame" x="28" y="315" width="330" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.45098039220000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="26"/>
-                                        <state key="normal" title="I love it. Print.">
+                                        <state key="normal" title="Send and Print">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -170,7 +149,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IIy-0G-dIc">
-                                        <rect key="frame" x="247" y="356" width="110" height="31"/>
+                                        <rect key="frame" x="194" y="373" width="164" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="16"/>
@@ -182,32 +161,65 @@
                                             <segue destination="YxB-U8-5S6" kind="modal" id="EeC-wM-W4A"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" id="rQT-jF-WSV">
-                                        <rect key="frame" x="27" y="172" width="330" height="78"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m0H-Rm-L5v">
+                                        <rect key="frame" x="28" y="75" width="404" height="103"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username@domain.com" minimumFontSize="17" id="trv-l5-TSe">
-                                                <rect key="frame" x="11" y="36" width="308" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                                <connections>
-                                                    <action selector="didEndOnExit:" destination="8uM-NC-Vep" eventType="editingDidEndOnExit" id="6A1-uy-o8H"/>
-                                                    <outlet property="delegate" destination="8uM-NC-Vep" id="Whq-Dm-aNh"/>
-                                                </connections>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email a copy to:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ybq-bo-b3h">
-                                                <rect key="frame" x="11" y="7" width="218" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <string key="text">Oh,
+Snap!</string>
+                                        <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="51"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lookin' good. Just let us know where to send the soft copy, hit print, and pick up your memory inside." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ybq-bo-b3h">
+                                        <rect key="frame" x="28" y="203" width="330" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="username@domain.com" minimumFontSize="17" id="trv-l5-TSe">
+                                        <rect key="frame" x="28" y="268" width="330" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="emailInputDidEndOnExit:" destination="8uM-NC-Vep" eventType="editingDidEndOnExit" id="Mxh-BC-k8v"/>
+                                            <outlet property="delegate" destination="8uM-NC-Vep" id="Whq-Dm-aNh"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" id="cYg-Be-3la">
+                                        <rect key="frame" x="28" y="191" width="330" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.18823529410000001" green="0.0" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="xbY-l8-Hjw">
+                                <rect key="frame" x="26" y="188" width="600" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="zo0-Cg-NRx">
+                                        <rect key="frame" x="-7" y="-3" width="600" height="400"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" id="On9-3l-kES">
+                                        <rect key="frame" x="-39" y="352" width="632" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yahoo-cannes-logo-2.png" id="l5H-FL-hoj">
+                                                <rect key="frame" x="458" y="6" width="166" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -217,10 +229,10 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="emailInput" destination="trv-l5-TSe" id="BvD-3Z-sVb"/>
                         <outlet property="printButton" destination="wvG-JF-sur" id="est-W5-f7j"/>
-                        <outlet property="printImage" destination="6Yb-H0-Wap" id="qS2-ZL-pJQ"/>
                         <outlet property="selectedImageContainer" destination="xbY-l8-Hjw" id="WVU-5N-Bu4"/>
                         <outlet property="selectedImageView" destination="zo0-Cg-NRx" id="fzP-2Y-Qiz"/>
                         <segue destination="ec9-Ec-vuj" kind="modal" identifier="thankYouSegue" modalTransitionStyle="crossDissolve" id="Nhx-UG-SBG"/>
@@ -261,11 +273,9 @@ Photo Booth</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I3O-9U-97c">
-                                <rect key="frame" x="114" y="415" width="615" height="160"/>
+                                <rect key="frame" x="114" y="413" width="718" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Did you know you can integrate real-time social feeds into your interactive video ads?
-
-Did you know it can also boost engagement by 2X? 
+                                <string key="text">Did you know you can integrate real-time social feeds into your interactive video ads? Did you know it can also boost engagement by 2X? 
 
 Ask your sales rep how.</string>
                                 <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="24"/>
@@ -279,6 +289,7 @@ Ask your sales rep how.</string>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <segue destination="YxB-U8-5S6" kind="modal" identifier="startOverSegue" modalTransitionStyle="crossDissolve" id="1Hg-lQ-Mmg"/>
                     </connections>
@@ -334,7 +345,7 @@ Ask your sales rep how.</string>
                                 </accessibility>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R2H-aw-bWM">
-                                <rect key="frame" x="232" y="20" width="559" height="479"/>
+                                <rect key="frame" x="232" y="70" width="559" height="479"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" staticText="YES"/>
@@ -347,28 +358,15 @@ Ask your sales rep how.</string>
                                 <size key="shadowOffset" width="3" height="3"/>
                             </label>
                             <view contentMode="scaleToFill" id="QxX-Ma-Kyq">
-                                <rect key="frame" x="236" y="179" width="550" height="348"/>
+                                <rect key="frame" x="236" y="225" width="550" height="317"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="logo" id="BtG-qn-oO8">
-                                        <rect key="frame" x="69" y="35" width="425" height="93"/>
+                                        <rect key="frame" x="63" y="66" width="425" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LBe-yH-b0K">
-                                        <rect key="frame" x="79" y="136" width="404" height="103"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
-                                            <bool key="isElement" value="NO"/>
-                                        </accessibility>
-                                        <string key="text">Experience the power of
- programmatic and social.</string>
-                                        <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="31"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cKH-7Y-t6u">
-                                        <rect key="frame" x="138" y="267" width="274" height="37"/>
+                                        <rect key="frame" x="138" y="214" width="274" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.25098040699958801" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="15"/>
@@ -397,6 +395,7 @@ Ask your sales rep how.</string>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="cameraView" destination="cPN-DC-sPy" id="H1h-BL-XCG"/>
                         <outlet property="capturedImage1" destination="0nl-s1-C70" id="pqP-8u-mhP"/>
@@ -422,10 +421,12 @@ Ask your sales rep how.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Photo_RightBG.png" width="612" height="792"/>
         <image name="arrow_left" width="34" height="69"/>
         <image name="arrow_right" width="34" height="69"/>
         <image name="logo" width="549" height="120"/>
         <image name="yahoo-cannes-logo-2.png" width="580" height="127"/>
+        <image name="yahoo-cannes-logo.png" width="748" height="163"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -434,6 +435,6 @@ Ask your sales rep how.</string>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Zxi-FW-zFq"/>
-        <segue reference="1Hg-lQ-Mmg"/>
+        <segue reference="EeC-wM-W4A"/>
     </inferredMetricsTieBreakers>
 </document>

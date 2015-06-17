@@ -11,13 +11,12 @@ import SwiftHTTP
 
 class PreviewViewController: UIViewController, UITextViewDelegate {
 
-    let SERVER_URL = "http://192.168.1.120:1337/cannes/photobooth"
+    let SERVER_URL = "http://172.16.9.124:1337/cannes/photobooth"
     
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var selectedImageView: UIImageView!
     @IBOutlet weak var selectedImageContainer: UIView!
     
-    @IBOutlet weak var printImage: UIImageView!
     @IBOutlet weak var printButton: UIButton!
     
     var selectedImage: UIImage!
@@ -28,17 +27,25 @@ class PreviewViewController: UIViewController, UITextViewDelegate {
         selectedImageView.clipsToBounds =  true
         selectedImageView.image = selectedImage
     }
+    @IBAction func emailInputDidEndOnExit(sender: AnyObject) {
+        self.resignFirstResponder();
+    }
    
     @IBAction func touchUpInsidePrint(sender: AnyObject) {
         println("Print!")
         
-        UIGraphicsBeginImageContext(selectedImageContainer.frame.size)
+        let emailRegex = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+
+        if emailInput.text == "" {
+            emailInput.attributedPlaceholder = NSAttributedString(string: emailInput.placeholder!, attributes: [NSForegroundColorAttributeName:UIColor.redColor()])
+            return
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(selectedImageContainer.frame.size, true, 1800 / selectedImageContainer.bounds.width)
         selectedImageContainer.drawViewHierarchyInRect(selectedImageContainer.bounds, afterScreenUpdates: true)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        self.printImage.image = image;
-        
         let fileManager = NSFileManager.defaultManager()
         var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
         var filePathToWrite = "\(paths)/SaveFile.png"

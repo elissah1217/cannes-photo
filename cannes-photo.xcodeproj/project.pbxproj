@@ -17,6 +17,8 @@
 		A41F0DCB1B2AAB11008403E6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41F0DCA1B2AAB11008403E6 /* PreviewViewController.swift */; };
 		E90006331B2FE62C007476A4 /* Gotham Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = E90006311B2FE62C007476A4 /* Gotham Book.otf */; };
 		E90006341B2FE62C007476A4 /* Gotham Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E90006321B2FE62C007476A4 /* Gotham Medium.otf */; };
+		E908DE3B1B31246C00592005 /* Photo_RightBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E908DE3A1B31246C00592005 /* Photo_RightBG.png */; };
+		E908DE3D1B312B4300592005 /* yahoo-cannes-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E908DE3C1B312B4300592005 /* yahoo-cannes-logo.png */; };
 		E94090811B2FB58200831415 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94090801B2FB58200831415 /* ThankYouViewController.swift */; };
 		E9A774081B2BFC5D009B5248 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A774041B2BFC5D009B5248 /* AudioToolbox.framework */; };
 		E9A7740A1B2BFC5D009B5248 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A774061B2BFC5D009B5248 /* CoreAudio.framework */; };
@@ -114,6 +116,8 @@
 		A41F0DCA1B2AAB11008403E6 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		E90006311B2FE62C007476A4 /* Gotham Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Book.otf"; sourceTree = "<group>"; };
 		E90006321B2FE62C007476A4 /* Gotham Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Medium.otf"; sourceTree = "<group>"; };
+		E908DE3A1B31246C00592005 /* Photo_RightBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_RightBG.png; sourceTree = "<group>"; };
+		E908DE3C1B312B4300592005 /* yahoo-cannes-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yahoo-cannes-logo.png"; sourceTree = "<group>"; };
 		E94090801B2FB58200831415 /* ThankYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
 		E9A774041B2BFC5D009B5248 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E9A774051B2BFC5D009B5248 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
@@ -250,6 +254,8 @@
 		E9A774271B2C0902009B5248 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E908DE3C1B312B4300592005 /* yahoo-cannes-logo.png */,
+				E908DE3A1B31246C00592005 /* Photo_RightBG.png */,
 				E9A774301B2C0CCB009B5248 /* twitter.jpg */,
 				E9A7742C1B2C0C4E009B5248 /* flickr.png */,
 				E9A7742A1B2C0B70009B5248 /* facebook.png */,
@@ -395,6 +401,8 @@
 				E9A774241B2C08FB009B5248 /* linkedin.jpg in Resources */,
 				A41F0DAC1B2A5BA7008403E6 /* Main.storyboard in Resources */,
 				A41F0DB11B2A5BA7008403E6 /* LaunchScreen.xib in Resources */,
+				E908DE3D1B312B4300592005 /* yahoo-cannes-logo.png in Resources */,
+				E908DE3B1B31246C00592005 /* Photo_RightBG.png in Resources */,
 				E9A774171B2C0216009B5248 /* appicon-photobooth-76x76.png in Resources */,
 				E90006331B2FE62C007476A4 /* Gotham Book.otf in Resources */,
 				E9A774311B2C0CCB009B5248 /* twitter.jpg in Resources */,
