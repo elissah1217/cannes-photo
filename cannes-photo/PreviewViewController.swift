@@ -11,7 +11,8 @@ import SwiftHTTP
 
 class PreviewViewController: UIViewController, UITextViewDelegate {
 
-    let SERVER_URL = "http://172.16.9.124:1337/cannes/photobooth"
+    let SERVER_URL = "http://52.28.115.200:1337/cannes/photobooth"
+//    let SERVER_URL = "http://172.16.9.124:1337/cannes/photobooth"
     
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var selectedImageView: UIImageView!
